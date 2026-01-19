@@ -12,27 +12,23 @@
 <div class="bubbles"></div>
 
 <header>
-  <h1> Aayush Sigdel</h1>
+  <h1>Aayush Sigdel</h1>
   <button class="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
   <nav class="nav-menu">
-    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
-    <a href="#projects">Projects</a><a href="#contact">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section id="home" class="section hero">
   <div class="hero-left">
-    <h2 class="hero-title">Hello, I'm Aayush 👋</h2>
+    <h2 class="hero-title">
+      <span id="typing-text"></span>
+    </h2>
     <p class="hero-subtitle">Full Stack Developer building clean, modern & responsive web applications</p>
-
-    <div class="hero-social">
-      <a href="https://www.instagram.com/aayush_sdl/" target="_blank" class="social-hero">
-        <i class="fab fa-instagram"></i><span>Instagram</span>
-      </a>
-      <a href="https://x.com/AayushSigdel15" target="_blank" class="social-hero">
-        <i class="fab fa-twitter"></i><span>Twitter</span>
-      </a>
-    </div>
 
     <div class="hero-cta">
       <a href="#contact" class="btn">Get in Touch</a>
@@ -42,32 +38,31 @@
 
   <div class="hero-right">
     <div class="image-container">
-      <img src="aayush.jpg" alt="Aayush Sigdel" class="profile-img">
+      <img src="aayush2.jpg" alt="Aayush Sigdel" class="profile-img">
       <div class="image-border"></div>
     </div>
   </div>
 </section>
 
 <section id="about" class="section">
-  <div class="glass about-card">
+  <div class="glass about-card section-content">
     <h2 class="section-title">About Me</h2>
-    <p class="about-text">
-      My name is <strong>Aayush Sigdel</strong>. I'm a passionate Full Stack Developer focused on building
-      scalable, responsive, and visually appealing web applications.
-    </p>
-    <p class="about-text">
-      I enjoy combining clean UI design with efficient backend logic using modern technologies.
-    </p>
-
-    <div class="about-social">
-      <p>Connect with me:</p>
-      <div class="social-links-inline">
-        <a href="https://www.instagram.com/aayush_sdl/" target="_blank" class="social-link-about">
-          <i class="fab fa-instagram"></i> @aayush_sdl
-        </a>
-        <a href="https://x.com/AayushSigdel15" target="_blank" class="social-link-about">
-          <i class="fab fa-twitter"></i> @AayushSigdel15
-        </a>
+    <div class="about-content">
+      <p>Hi, I'm <strong>Aayush Sigdel</strong>, a passionate Full Stack Developer from Nepal with a keen interest in building scalable, responsive, and visually appealing web applications. I combine clean UI design with efficient backend logic to create seamless user experiences.</p>
+      
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <h4>🎯 My Focus</h4>
+          <p>Creating modern web solutions that solve real-world problems with clean, maintainable code and intuitive interfaces.</p>
+        </div>
+        <div class="highlight-item">
+          <h4>💡 What I Do</h4>
+          <p>I specialize in full-stack development, combining frontend expertise with robust backend systems to deliver complete solutions.</p>
+        </div>
+        <div class="highlight-item">
+          <h4>🚀 My Approach</h4>
+          <p>I believe in continuous learning, writing clean code, and collaborating effectively to build products that make a difference.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -80,8 +75,11 @@
       <i class="fas fa-code skill-icon"></i>
       <h3>Frontend</h3>
       <ul>
-        <li>HTML5</li><li>CSS3 & Animations</li><li>JavaScript (ES6+)</li>
-        <li>Responsive Design</li><li>UI/UX</li>
+        <li>HTML5</li>
+        <li>CSS3 & Animations</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Responsive Design</li>
+        <li>UI/UX</li>
       </ul>
     </div>
 
@@ -89,8 +87,11 @@
       <i class="fas fa-server skill-icon"></i>
       <h3>Backend</h3>
       <ul>
-        <li>Flask</li><li>SQLite</li><li>REST APIs</li>
-        <li>Authentication</li><li>Deployment</li>
+        <li>Flask</li>
+        <li>SQLite</li>
+        <li>REST APIs</li>
+        <li>Authentication</li>
+        <li>Deployment</li>
       </ul>
     </div>
 
@@ -98,8 +99,11 @@
       <i class="fas fa-tools skill-icon"></i>
       <h3>Tools</h3>
       <ul>
-        <li>Git & GitHub</li><li>VS Code</li><li>Figma</li>
-        <li>Problem Solving</li><li>Agile</li>
+        <li>Git & GitHub</li>
+        <li>VS Code</li>
+        <li>Figma</li>
+        <li>Problem Solving</li>
+        <li>Agile</li>
       </ul>
     </div>
   </div>
@@ -108,58 +112,59 @@
 <section id="projects" class="section">
   <h2 class="section-title">Featured Projects</h2>
   <div class="projects-grid">
-
     <div class="project-card glass">
       <h3>E-commerce Platform</h3>
-      <p>Online store with authentication, cart system and payment integration.</p>
-      <div class="tech-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+      <p>A full-featured online store with user authentication, shopping cart system, order management, and secure payment integration. Built with a responsive design to ensure seamless shopping experience across all devices.</p>
+      <div class="tech-tags"><span>Flask</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQLite</span></div>
     </div>
 
     <div class="project-card glass">
       <h3>Seat Plan Generating System</h3>
-      <p>
-        Web-based examination seat plan generation system that automatically allocates students
-        using database-driven logic.
-      </p>
-      <div class="tech-tags">
-        <span>Flask</span><span>SQLite</span><span>HTML</span><span>CSS</span>
-      </div>
+      <p>An intelligent web-based examination seat plan generation system that automatically allocates students using advanced database-driven logic. Reduces manual work and ensures fair, randomized seating arrangements for large-scale examinations.</p>
+      <div class="tech-tags"><span>Flask</span><span>SQLite</span><span>HTML</span><span>CSS</span><span>Python</span></div>
     </div>
 
-    <div class="project-card glass">
-      <h3>Portfolio Website</h3>
-      <p>Responsive portfolio with animations, glassmorphism and interactive UI.</p>
-      <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-    </div>
-
-  </div>
 </section>
 
 <section id="contact" class="section">
-  <div class="glass contact-card">
+  <div class="glass contact-card section-content">
     <h2 class="section-title">Get In Touch</h2>
-    <p class="contact-subtitle">Open to opportunities and collaborations.</p>
+    <p class="contact-subtitle">I'm always open to new opportunities, exciting projects, and meaningful collaborations. Feel free to reach out!</p>
 
     <div class="contact-info">
-      <div class="contact-item"><i class="fas fa-phone"></i><p>+977 9748213920</p></div>
-      <div class="contact-item"><i class="fas fa-envelope"></i><p>aayushsigdel08@gmail.com</p></div>
-      <div class="contact-item"><i class="fas fa-map-marker-alt"></i><p>Shuklagandaki, Nepal</p></div>
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <h4>Phone</h4>
+        <p>+977 9748213920</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <h4>Email</h4>
+        <p>aayushsigdel08@gmail.com</p>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <h4>Location</h4>
+        <p>Shuklagandaki, Nepal</p>
+      </div>
     </div>
 
-    <div class="social-links">
-      <a href="https://www.instagram.com/aayush_sdl/" class="social-link"><i class="fab fa-instagram"></i></a>
-      <a href="https://x.com/AayushSigdel15" class="social-link"><i class="fab fa-twitter"></i></a>
-      <a href="https://github.com/AayushSigdel1" class="social-link"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/aayush-sigdel-1191783a3/" class="social-link"><i class="fab fa-linkedin"></i></a>
+    <div class="social-section">
+      <h3>Connect With Me</h3>
+      <div class="social-links">
+        <a href="https://www.instagram.com/aayush_sdl/" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/AayushSigdel15" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/AayushSigdel1" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/aayush-sigdel-1191783a3/" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Aayush Sigdel. Designed & Developed with Love</p>
+  <p>© 2026 Aayush Sigdel. Designed & Developed with Love</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-
