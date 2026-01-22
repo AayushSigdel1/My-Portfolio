@@ -124,3 +124,22 @@ function typeWriter() {
 }
 
 typeWriter();
+
+
+// Tech Tags Click Handler
+$$('.tech-tags span').forEach(tag => {
+  tag.addEventListener('click', function(e) {
+    e.stopPropagation();
+    
+    // Remove active class from all tags
+    $$('.tech-tags span').forEach(t => t.classList.remove('active'));
+    
+    // Add active class to clicked tag
+    this.classList.add('active');
+  });
+});
+
+// Remove active class when clicking outside
+document.addEventListener('click', function() {
+  $$('.tech-tags span').forEach(tag => tag.classList.remove('active'));
+});
