@@ -2,7 +2,7 @@
 const $ = s => document.querySelector(s);
 const $$ = s => document.querySelectorAll(s);
 
-// Mobile Menu Toggle
+// Mobile Menu Toggle with smooth animations
 document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = $('.menu-toggle');
   const navMenu = $('.nav-menu');
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
       e.stopPropagation();
       navMenu.classList.toggle('active');
       
-      // Toggle icon
+      // Toggle icon with rotation
       const icon = menuToggle.querySelector('i');
       if (icon.classList.contains('fa-bars')) {
         icon.classList.remove('fa-bars');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Smooth Scroll
+// Smooth Scroll with easing
 $$('a[href^="#"]').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -65,12 +65,15 @@ $$('a[href^="#"]').forEach(link => {
   });
 });
 
-// Navbar Hide on Scroll
+// Navbar Hide on Scroll with smooth transitions
 let lastScrollTop = 0;
 const header = $('header');
+let scrollTimeout;
 
 window.addEventListener('scroll', function() {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+  clearTimeout(scrollTimeout);
   
   if (currentScroll > lastScrollTop && currentScroll > 100) {
     header.style.transform = 'translateY(-100%)';
@@ -80,53 +83,71 @@ window.addEventListener('scroll', function() {
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
-// Bubbles Animation
+// Enhanced Bubbles Animation with kinetic motion
 const container = $('.bubbles');
-const max = window.innerWidth < 768 ? 200 : 300;
+const max = window.innerWidth < 768 ? 150 : 250;
 
 function createBubble() {
   const bubble = document.createElement('span');
-  const size = 10 + Math.random() * 20;
-  const duration = 2 + Math.random() * 3;
+  const size = 8 + Math.random() * 25;
+  const duration = 3 + Math.random() * 4;
   const leftPosition = Math.random() * 100;
+  const delay = Math.random() * 0.5;
   
   bubble.style.cssText = `
     left: ${leftPosition}%;
     width: ${size}px;
     height: ${size}px;
-    opacity: ${0.1 + Math.random() * 0.3};
+    opacity: ${0.15 + Math.random() * 0.35};
     animation-duration: ${duration}s;
+    animation-delay: ${delay}s;
   `;
   
   container.appendChild(bubble);
-  setTimeout(() => bubble.remove(), duration * 1000);
+  setTimeout(() => bubble.remove(), (duration + delay) * 1000);
 }
 
-// Create initial bubbles
+// Create initial bubbles with staggered timing
 for (let i = 0; i < max; i++) {
-  setTimeout(createBubble, i * 30);
+  setTimeout(createBubble, i * 25);
 }
 
-// Create bubbles continuously
-setInterval(createBubble, 100);
+// Create bubbles continuously for continuous effect
+setInterval(createBubble, 150);
 
-// Typing Effect
-const typingText = "Hello, I'm Aayush 👋";
-const typingElement = $('#typing-text');
-let charIndex = 0;
+// Typing Animation - Cycle through roles
+const typingTexts = $$('.typing-text');
+typingTexts.forEach((el, index) => {
+  const text = el.getAttribute('data-text');
+  el.textContent = text;
+  el.style.color = 'inherit';
+  el.style.display = 'inline';
+});
 
-function typeWriter() {
-  if (charIndex < typingText.length) {
-    typingElement.textContent += typingText.charAt(charIndex);
-    charIndex++;
-    setTimeout(typeWriter, 120);
-  }
-}
+// Intersection Observer for scroll animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -100px 0px'
+};
 
-typeWriter();
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
 
+// Observe all cards for animation
+$$('.skill-card, .project-card, .highlight-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+  observer.observe(el);
+});
 
-// Tech Tags Click Handler
+// Tech Tags Click Handler with ripple effect
 $$('.tech-tags span').forEach(tag => {
   tag.addEventListener('click', function(e) {
     e.stopPropagation();
@@ -143,3 +164,25 @@ $$('.tech-tags span').forEach(tag => {
 document.addEventListener('click', function() {
   $$('.tech-tags span').forEach(tag => tag.classList.remove('active'));
 });
+
+// Parallax effect on mouse move
+document.addEventListener('mousemove', function(e) {
+  const profileImg = $('.profile-img');
+  if (profileImg) {
+    const x = (e.clientX / window.innerWidth) * 10;
+    const y = (e.clientY / window.innerHeight) * 10;
+    profileImg.style.transform = `perspective(1000px) rotateX(${y}deg) rotateY(${x}deg)`;
+  }
+});
+
+// Add ripple animation to CSS dynamically
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+`;
+document.head.appendChild(style);
