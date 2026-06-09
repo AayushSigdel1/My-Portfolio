@@ -45,6 +45,31 @@ document.addEventListener('DOMContentLoaded', function() {
       icon.classList.add('fa-bars');
     }
   });
+
+  // Theme Toggle
+  const themeToggle = $('.theme-toggle');
+  const body = $('body');
+  const themeIcon = themeToggle.querySelector('i');
+
+  // Check for saved theme preference or default to dark
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  if (savedTheme === 'light') {
+    body.classList.add('light-theme');
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function() {
+      body.classList.toggle('light-theme');
+      
+      const isLight = body.classList.contains('light-theme');
+      themeIcon.classList.toggle('fa-moon', !isLight);
+      themeIcon.classList.toggle('fa-sun', isLight);
+      
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  }
 });
 
 // Smooth Scroll with easing
