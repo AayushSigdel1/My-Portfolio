@@ -378,6 +378,13 @@ header:hover {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
   position: relative;
+  background: #0a0e27;
+}
+
+body.light-theme .logo {
+  background: #f8f9fa;
+  border-color: #0066aa;
+  box-shadow: 0 0 20px rgba(0, 100, 150, 0.3);
 }
 
 .logo::before {
@@ -566,9 +573,11 @@ header h1:hover {
 
 .typing-container {
   display: inline-block;
-  min-width: 300px;
+  width: 100%;
+  max-width: 100%;
   position: relative;
   height: 1.2em;
+  overflow: hidden;
 }
 
 .typing-text {
@@ -576,6 +585,7 @@ header h1:hover {
   left: 0;
   top: 0;
   opacity: 0;
+  visibility: hidden;
   color: #ffffff !important;
   animation: typing-cycle 9s infinite;
   white-space: nowrap;
@@ -593,6 +603,8 @@ body.light-theme .typing-text {
 
 .typing-text:nth-child(1) {
   animation-delay: 0s;
+  opacity: 1;
+  visibility: visible;
 }
 
 .typing-text:nth-child(2) {
@@ -701,10 +713,10 @@ body.light-theme .typing-text {
 
 .profile-img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 50%;
   box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
   animation: floatImage 4s ease-in-out infinite, zoomIn 8s ease-in-out infinite;
-  border: 2px solid rgba(0, 212, 255, 0.3);
+  border: 3px solid var(--primary);
   transition: transform 0.3s ease;
 }
 
@@ -1501,6 +1513,7 @@ footer p {
   }
   .typing-container {
     min-width: 250px;
+    width: auto;
   }
   .theme-toggle {
     width: 40px;
@@ -1641,6 +1654,7 @@ footer p {
   }
   .typing-container {
     min-width: 200px;
+    width: auto;
   }
 }
 
@@ -1684,6 +1698,7 @@ footer p {
   }
   .typing-container {
     min-width: 180px;
+    width: auto;
   }
   .hero-subtitle {
     font-size: 1rem;
@@ -1771,6 +1786,7 @@ footer p {
   }
   .typing-container {
     min-width: 150px;
+    width: auto;
   }
   .hero-subtitle {
     font-size: 0.9rem;
@@ -1841,6 +1857,9 @@ footer p {
   .hero-title {
     font-size: 1.3rem;
   }
+  .typing-text {
+    font-size: 0.8rem;
+  }
   .hero-subtitle {
     font-size: 0.85rem;
   }
@@ -1899,6 +1918,10 @@ footer p {
   }
   .typing-container {
     min-width: 140px;
+    width: auto;
+  }
+  .typing-text {
+    font-size: 0.9rem;
   }
   .hero-subtitle {
     font-size: 0.9rem;
@@ -1981,6 +2004,9 @@ footer p {
   }
   .hero-title {
     font-size: 1.3rem;
+  }
+  .typing-text {
+    font-size: 0.8rem;
   }
   .hero-subtitle {
     font-size: 0.85rem;

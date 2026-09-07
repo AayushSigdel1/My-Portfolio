@@ -147,6 +147,16 @@ typingTexts.forEach((el, index) => {
   el.textContent = text;
   el.style.color = 'inherit';
   el.style.display = 'inline';
+  el.style.visibility = 'hidden';
+  el.style.opacity = '0';
+  
+  // Make first text visible initially
+  if (index === 0) {
+    setTimeout(() => {
+      el.style.visibility = 'visible';
+      el.style.opacity = '1';
+    }, 100);
+  }
 });
 
 // Intersection Observer for scroll animations
