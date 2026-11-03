@@ -1,212 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aayush Sigdel | Portfolio</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="aayush2.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="Aayush Sigdel — Computer Engineer, Software Developer, UI/UX Designer and System & Quality Analyst." />
+  <title>Aayush Sigdel | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-<div class="bubbles"></div>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Aayush Sigdel home"><span class="brand-mark">A</span><span>AAYUSH<span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a>
+        <a class="nav-cta" href="#contact">Let's talk <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
 
-<header>
-  <div class="header-left">
-    <img src="aayush2.jpg" alt="Logo" class="logo">
-    <h1>Aayush Sigdel</h1>
-  </div>
-  <div class="header-right">
-    <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
-    <button class="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
-  </div>
-  <nav class="nav-menu">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section id="home" class="section hero">
-  <div class="hero-left">
-    <div class="hero-header">
-      <span class="portfolio-label">PORTFOLIO</span>
-    </div>
-    <h2 class="hero-title">
-      Hello, I'm<br>
-      <span class="typing-container">
-        <span class="typing-text" data-text="Full Stack Developer"></span>
-        <span class="typing-text" data-text="Creative Coder"></span>
-        <span class="typing-text" data-text="Problem Solver"></span>
-      </span>
-    </h2>
-    <p class="hero-subtitle">Full Stack developer Crafting clean, modern & responsive web experiences from Nepal — where elegant code meets cinematic design.</p>
-
-    <div class="hero-cta">
-      <a href="#contact" class="btn">Get in Touch</a>
-      <a href="#projects" class="btn secondary">View Projects</a>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <div class="image-container">
-      <img src="aayush2.jpg" alt="Aayush Sigdel" class="profile-img">
-    </div>
-  </div>
-</section>
-
-<!-- Horizontal Scrolling Text Animation -->
-<div class="horizontal-scroll-container">
-  <div class="scroll-text">
-    <span class="scroll-item">Full Stack Developer</span>
-    <span class="scroll-divider">•</span>
-    <span class="scroll-item">Creative Coder</span>
-    <span class="scroll-divider">•</span>
-    <span class="scroll-item">Problem Solver</span>
-    <span class="scroll-divider">•</span>
-    <span class="scroll-item">UI/UX Designer</span>
-    <span class="scroll-divider">•</span>
-    <span class="scroll-item">Backend Developer</span>
-    <span class="scroll-divider">•</span>
-    <span class="scroll-item">Tech Enthusiast</span>
-    <span class="scroll-divider">•</span>
-    <span class="scroll-item">Innovator</span>
-    <span class="scroll-divider">•</span>
-    <span class="scroll-item">Full Stack Developer</span>
-    <span class="scroll-divider">•</span>
-    <span class="scroll-item">Creative Coder</span>
-    <span class="scroll-divider">•</span>
-    <span class="scroll-item">Problem Solver</span>
-    <span class="scroll-divider">•</span>
-  </div>
-</div>
-
-<section id="about" class="section">
-  <div class="glass about-card section-content">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-content">
-      <p>Hi, I'm <strong>Aayush Sigdel</strong>, a passionate Full Stack Developer from Nepal with a keen interest in building scalable, responsive, and visually appealing web applications. I combine clean UI design with efficient backend logic to create seamless user experiences.</p>
-      
-      <div class="about-highlights">
-        <div class="highlight-item">
-          <h4>🎯 My Focus</h4>
-          <p>Creating modern web solutions that solve real-world problems with clean, maintainable code and intuitive interfaces.</p>
+  <main>
+    <section class="hero section container" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> OPEN TO OPPORTUNITIES <span class="eyebrow-line"></span></div>
+        <p class="intro">Hello, I'm</p>
+        <h1>Aayush <span>Sigdel.</span></h1>
+        <h2>Computer Engineer <span class="muted">·</span> Software Developer</h2>
+        <p class="hero-description">I build thoughtful digital experiences and practical software solutions — from web applications and automated systems to computer vision projects.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <span>↗</span></a>
+          <a class="button button-ghost" href="Aayush_Sigdel_CV.pdf" download>Download CV <span>↓</span></a>
         </div>
-        <div class="highlight-item">
-          <h4>💡 What I Do</h4>
-          <p>I specialize in full-stack development, combining frontend expertise with robust backend systems to deliver complete solutions.</p>
+        <div class="hero-meta"><span>BASED IN TANAHUN, NEPAL</span><span class="meta-divider"></span><span>COMPUTER ENGINEERING · 2026</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="portrait-frame">
+          <div class="portrait-glow"></div>
+          <img class="portrait" src="profile.jpg" alt="Portrait of Aayush Sigdel" />
+          <div class="portrait-fallback" aria-hidden="true">AS</div>
+          <div class="portrait-caption"><span class="caption-icon">✳</span><span>Curious mind.<br>Builder at heart.</span></div>
         </div>
-        <div class="highlight-item">
-          <h4>🚀 My Approach</h4>
-          <p>I believe in continuous learning, writing clean code, and collaborating effectively to build products that make a difference.</p>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-chip chip-top"><span>✦</span> UI / UX DESIGN</div>
+        <div class="floating-chip chip-bottom"><span>⌘</span> PYTHON · FLASK</div>
+      </div>
+      <a class="scroll-cue" href="#about"><span></span> SCROLL TO EXPLORE</a>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-heading"><p class="section-kicker">01 / A LITTLE INTRO</p><h2>Building useful things<br><span>with thoughtful design.</span></h2></div>
+      <div class="about-grid">
+        <p class="about-lead">I'm a registered Computer Engineer from Nepal who enjoys turning ideas into reliable, user-friendly digital products.</p>
+        <div class="about-body"><p>My work brings together software development, UI/UX design, system analysis and quality assurance. I have built web applications, automated examination seating tools and a semi-real-time classroom activity monitoring system using computer vision and deep learning.</p><p>I'm looking to contribute to a team where I can keep learning, solve meaningful problems and create technology that makes a difference.</p>
+          <div class="about-facts"><div><strong>03</strong><span>Featured projects</span></div><div><strong>2026</strong><span>Graduate</span></div><div><strong>01</strong><span>Registered engineer</span></div></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="skills" class="section">
-  <h2 class="section-title">Skills & Technologies</h2>
-  <div class="skills-grid">
-    <div class="skill-card glass">
-      <i class="fas fa-code skill-icon"></i>
-      <h3>Frontend</h3>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3 & Animations</li>
-        <li>JavaScript (ES6+)</li>
-        <li>Responsive Design</li>
-        <li>UI/UX</li>
-      </ul>
-    </div>
-
-    <div class="skill-card glass">
-      <i class="fas fa-server skill-icon"></i>
-      <h3>Backend</h3>
-      <ul>
-        <li>Flask</li>
-        <li>SQLite</li>
-        <li>REST APIs</li>
-        <li>Authentication</li>
-        <li>Deployment</li>
-      </ul>
-    </div>
-
-    <div class="skill-card glass">
-      <i class="fas fa-tools skill-icon"></i>
-      <h3>Tools</h3>
-      <ul>
-        <li>Git & GitHub</li>
-        <li>VS Code</li>
-        <li>Figma</li>
-        <li>Problem Solving</li>
-        <li>Agile</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="projects" class="section">
-  <h2 class="section-title">Featured Projects</h2>
-  <div class="projects-grid">
-    <div class="project-card glass">
-      <h3>E-commerce Platform</h3>
-      <p>A full-featured online store with user authentication, shopping cart system, order management, and secure payment integration. Built with a responsive design to ensure seamless shopping experience across all devices.</p>
-      <div class="tech-tags"><span>Flask</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQLite</span></div>
-    </div>
-
-    <div class="project-card glass">
-      <h3>Seat Plan Generating System</h3>
-      <p>An intelligent web-based examination seat plan generation system that automatically allocates students using advanced database-driven logic. Reduces manual work and ensures fair, randomized seating arrangements for large-scale examinations.</p>
-      <div class="tech-tags"><span>Flask</span><span>SQLite</span><span>HTML</span><span>CSS</span><span>Python</span></div>
-    </div>
-
-    <div class="project-card glass">
-      <h3>Classroom Activity Monitoring System</h3>
-      <p>An AI-powered real-time classroom monitoring solution that uses computer vision to track student engagement and activity levels. Leverages CNN for face detection and pose estimation to provide educators with actionable insights on classroom dynamics and student participation patterns.</p>
-      <div class="tech-tags"><span>Flask</span><span>CNN</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>OpenCV</span></div>
-    </div>
-
-</section>
-
-<section id="contact" class="section">
-  <div class="glass contact-card section-content">
-    <h2 class="section-title">Get In Touch</h2>
-    <p class="contact-subtitle">I'm always open to new opportunities, exciting projects, and meaningful collaborations. Feel free to reach out!</p>
-
-    <div class="contact-info">
-      <div class="contact-item">
-        <i class="fas fa-phone"></i>
-        <h4>Phone</h4>
-        <a href="tel:+977-9748213920" class="contact-link">+977 9748213920</a>
+    <section class="section container" id="skills">
+      <div class="section-heading"><p class="section-kicker">02 / WHAT I WORK WITH</p><h2>Skills & <span>toolkit.</span></h2></div>
+      <div class="skills-grid">
+        <article class="skill-card"><div class="skill-icon">⌘</div><h3>Development</h3><p>Python, Flask, HTML, CSS, JavaScript, SQLite, web application development, system design</p><div class="skill-tags"><span>Python</span><span>Flask</span><span>JavaScript</span></div></article>
+        <article class="skill-card"><div class="skill-icon">◈</div><h3>UI / UX Design</h3><p>User-centered design, interface design, wireframing and usability.</p><div class="skill-tags"><span>UI Design</span><span>Wireframing</span><span>Usability</span></div></article>
+        <article class="skill-card"><div class="skill-icon">⌕</div><h3>Analysis & QA</h3><p>Requirements analysis, functional testing, test cases, defect reporting and validation.</p><div class="skill-tags"><span>Testing</span><span>Validation</span><span>Analysis</span></div></article>
+        <article class="skill-card"><div class="skill-icon">⌁</div><h3>Data & Machine Learning</h3><p>Pandas, statistics, regression, Naive Bayes, K-Means, decision trees, XGBoost, SVM, KNN, PCA and recommender systems.</p><div class="skill-tags"><span>Pandas</span><span>Scikit concepts</span><span>ML</span></div></article>
+        <article class="skill-card"><div class="skill-icon">◎</div><h3>Computer Vision</h3><p>PyTorch, OpenCV, activity recognition and deep learning.</p><div class="skill-tags"><span>PyTorch</span><span>OpenCV</span><span>Vision</span></div></article>
+        <article class="skill-card"><div class="skill-icon">文</div><h3>Languages</h3><p>Comfortable communicating in English and Nepali.</p><div class="skill-tags"><span>English</span><span>Nepali</span></div></article>
       </div>
-      <div class="contact-item">
-        <i class="fas fa-envelope"></i>
-        <h4>Email</h4>
-        <a href="mailto:aayushsigdel08@gmail.com" class="contact-link">aayushsigdel08@gmail.com</a>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-heading"><p class="section-kicker">03 / SELECTED WORK</p><h2>Things I've <span>created.</span></h2><p class="heading-note">A selection of academic and personal software projects.</p></div>
+      <div class="projects-list">
+        <article class="project-card project-featured"><div class="project-number">01</div><div class="project-content"><div class="project-type">COMPUTER VISION · DEEP LEARNING</div><h3>Classroom Activity<br>Monitoring System</h3><p>A semi-real-time system that monitors classroom activity using computer vision and deep learning. Includes activity recognition, attendance-related functionality and role-based access for admin, teacher and student users.</p><div class="project-tags"><span>Python</span><span>PyTorch</span><span>OpenCV</span><span>Flask</span><span>SQLite</span></div></div><div class="project-art art-vision"><div class="scan-frame"><span class="scan-corner"></span><span class="scan-person">◉</span><span class="scan-label">ACTIVITY DETECTED</span><div class="scan-lines"></div></div><span class="art-caption">VISION / 01</span></div></article>
+        <article class="project-card"><div class="project-number">02</div><div class="project-content"><div class="project-type">AUTOMATION · WEB APPLICATION</div><h3>Seat Plan Generating System</h3><p>Automatically generates examination seating arrangements, reducing manual effort and improving allocation efficiency through custom system logic and structured data handling.</p><div class="project-tags"><span>Automation</span><span>System Logic</span><span>Web App</span></div></div><div class="project-art art-seats"><div class="seat-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="art-caption">ALLOCATION / 02</span></div></article>
+        <article class="project-card"><div class="project-number">03</div><div class="project-content"><div class="project-type">WEB DEVELOPMENT · E-COMMERCE</div><h3>E-commerce Website</h3><p>A web-based shopping platform supporting product browsing and online shopping workflows, with a focus on clean interface design, clear product presentation and smooth functionality.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web Development</span></div></div><div class="project-art art-commerce"><div class="commerce-window"><div class="window-bar"><i></i><i></i><i></i></div><div class="product-shapes"><b></b><b></b><b></b></div><div class="window-lines"><i></i><i></i></div></div><span class="art-caption">COMMERCE / 03</span></div></article>
       </div>
-    </div>
+    </section>
 
-    <div class="social-section">
-      <h3>Connect With Me</h3>
-      <div class="social-links">
-        <a href="https://www.instagram.com/aayush_sdl/" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/AayushSigdel15" class="social-link" title="X"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://github.com/AayushSigdel1" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/aayush-sigdel-1191783a3/" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <section class="section container" id="education">
+      <div class="section-heading"><p class="section-kicker">04 / THE FOUNDATION</p><h2>Education & <span>credentials.</span></h2></div>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-date">2022 — 2026</div><div class="timeline-marker"></div><div class="timeline-content"><p class="timeline-label">BACHELOR'S DEGREE</p><h3>Bachelor of Computer Engineering</h3><p>Pokhara University, School of Engineering</p><span>Dhungepatan, Nepal</span></div></div>
+        <div class="timeline-item"><div class="timeline-date">PROFESSIONAL</div><div class="timeline-marker"></div><div class="timeline-content"><p class="timeline-label">REGISTRATION</p><h3>Registered Computer Engineer</h3><p>Professionally registered engineer in Nepal.</p></div></div>
+        <div class="timeline-item"><div class="timeline-date">CERTIFICATION</div><div class="timeline-marker"></div><div class="timeline-content"><p class="timeline-label">DATA SCIENCE & MACHINE LEARNING</p><h3>Data Science and Machine Learning with Python</h3><p>Six-module course covering Python and Pandas, statistics and probability, predictive models, supervised and unsupervised learning, recommender systems, KNN and PCA.</p></div></div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<footer>
-  <p>© 2026 Aayush Sigdel. Designed & Developed with Love</p>
-</footer>
-
-<script src="script.js"></script>
+    <section class="contact-section" id="contact"><div class="container contact-inner"><p class="section-kicker">05 / LET'S CONNECT</p><h2>Have a project<br>in <span>mind?</span></h2><p class="contact-copy">I'm open to opportunities in software development, UI/UX design, and system analysis & quality assurance.</p><a class="button button-primary contact-button" href="mailto:aayushsigdel08@gmail.com">Get in touch <span>↗</span></a><div class="contact-details"><a href="mailto:aayushsigdel08@gmail.com">aayushsigdel08@gmail.com</a><a href="tel:+9779748213920">+977 9748213920</a></div><div class="social-links"><a href="https://www.instagram.com/aayush_sdl/" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a><a href="https://x.com/AayushSigdel15" class="social-link" title="X"><i class="fab fa-x-twitter"></i></a><a href="https://github.com/AayushSigdel1" class="social-link" title="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/aayush-sigdel-1191783a3/" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a></div></div></section>
+  </main>
+  <footer class="footer container"><a class="brand" href="#home"><span class="brand-mark">A</span><span>AAYUSH<span class="brand-dot">.</span></span></a><p>Designed & built with curiosity.</p><span>© <span id="year"></span> Aayush Sigdel</span><a class="back-top" href="#home">BACK TO TOP ↑</a></footer>
 </body>
 </html>

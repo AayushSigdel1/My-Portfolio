@@ -1,9 +1,20 @@
-<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-  <!-- Circular background -->
-  <circle cx="128" cy="128" r="120" fill="#00d4ff" stroke="#8338ec" stroke-width="6"/>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient effect -->
+  <circle cx="32" cy="32" r="30" fill="#0b1020"/>
+  <circle cx="32" cy="32" r="28" fill="#11182b" stroke="#151e34" stroke-width="1"/>
   
-  <!-- Letter A -->
-  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" 
-        font-family="Arial, sans-serif" font-size="160" font-weight="bold" 
-        fill="white" style="transform: translateY(-8px);">A</text>
+  <!-- Decorative ambient glow elements -->
+  <circle cx="32" cy="32" r="24" fill="#0b1020" opacity="0.7"/>
+  <circle cx="20" cy="20" r="8" fill="#a9f36b" opacity="0.4" filter="blur(4px)"/>
+  <circle cx="44" cy="44" r="6" fill="#9b8cff" opacity="0.3" filter="blur(4px)"/>
+  
+  <!-- The "A" letter in accent colors -->
+  <text x="32" y="43" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="32" text-anchor="middle" fill="url(#gradient)">A</text>
+  
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a9f36b"/>
+      <stop offset="100%" stop-color="#9b8cff"/>
+    </linearGradient>
+  </defs>
 </svg>
